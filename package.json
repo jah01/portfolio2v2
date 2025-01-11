@@ -2,6 +2,7 @@
   "name": "portfolio2v2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jah01.github.io/portfolio2v2/",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
