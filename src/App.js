@@ -10,7 +10,7 @@ import GlobalStyle from "./Global";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio2v2">
       <GlobalStyle />
       <div className="App">
         <Navbar />
@@ -18,7 +18,6 @@ function App() {
           <Routes>        
             {/* all of the routes go here */}
             <Route index element={<Home />} />
-            <Route path="portfolio2v2" element={<Home />} />
             <Route path="projects" element={<Projects />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
