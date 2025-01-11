@@ -17,7 +17,8 @@ function App() {
         <div className="content">
           <Routes>        
             {/* all of the routes go here */}
-            <Route index element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio2v2" element={<Home />} />
             <Route path="projects" element={<Projects />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
