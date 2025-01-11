@@ -1,0 +1,81 @@
+@import "../index.scss";
+
+.title {
+    opacity: 0;
+    animation: showTitle 1.5s ease-out forwards;
+    animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    // animation-timing-function: cubic-bezier(.61,1.21,.76,1.05);
+    // animation-timing-function: cubic-bezier(.61,1.21,.55,1.04);
+}
+
+.noSel {
+    user-select: none;
+}
+
+.accHead {
+    margin: 24px 0;
+    overflow: hidden;
+
+    button {
+        all: unset;
+
+        .active {
+            transform: rotate(-45deg);
+        }
+    }
+
+    svg {
+        pointer-events: none;
+        cursor: default;
+        animation: anchorActivated 1.5s forwards;
+        transition: transform .75s ease;
+
+        path {
+            fill: var(--text);
+        }
+
+        &:hover {
+            path {
+                fill: var(--text-dark);
+            }
+        }
+
+
+    }
+}
+
+//content
+.content {
+    overflow: hidden;
+    transition: .75s ease;
+}
+
+.opened {
+    overflow: auto;
+}
+
+.para {
+    transition: max-height .75s ease;
+}
+
+//animations
+@keyframes showTitle {
+    from {
+        transform: translateY(200px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anchorActivated {
+    from {
+        pointer-events: none;
+        cursor: default;
+    }
+    to {
+        pointer-events: auto; 
+        cursor: pointer;
+    }
+}
